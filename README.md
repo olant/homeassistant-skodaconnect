@@ -226,8 +226,8 @@ This might be broken since 1.0.30 when device_tracker changed behaviour.
     - platform: state
       entity_id: device_tracker.kodiaq
   condition: template
-    condition: template
-    value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
+    - condition: template
+      value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
   action:
     - service: notify.ios_my_ios_device
       data_template:
