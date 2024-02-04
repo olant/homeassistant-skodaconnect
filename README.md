@@ -225,7 +225,7 @@ This might be broken since 1.0.30 when device_tracker changed behaviour.
   trigger:
     - platform: state
       entity_id: device_tracker.kodiaq
-  condition: template
+  condition:
     - condition: template
       value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
   action:
